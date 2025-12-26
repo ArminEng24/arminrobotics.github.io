@@ -497,28 +497,27 @@ export default function Home() {
       </AnimatedSection>
 
       {/* Contact Section */}
-{/* Contact Section */}
-<AnimatedSection id="contact" animate={false} className="border-t border-border/30 flex items-start md:items-center py-14 md:py-0">
-  <div className="max-w-5xl mx-auto px-4 text-center">
-    <div className="inline-flex flex-col items-center w-fit max-w-full mb-12">
-      <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text tracking-tight mb-3">Let's Connect</h2>
-      <div className="h-1 w-full bg-gradient-to-r from-sky-400 via-cyan-400 to-teal-500 rounded-full animate-shimmer" />
-    </div>
+      <AnimatedSection id="contact" animate={false} className="border-t border-border/30 flex items-start md:items-center py-14 md:py-0">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <div className="inline-flex flex-col items-center w-fit max-w-full mb-12">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text tracking-tight mb-3">Let's Connect</h2>
+            <div className="h-1 w-full bg-gradient-to-r from-sky-400 via-cyan-400 to-teal-500 rounded-full animate-shimmer" />
+          </div>
 
-    <p className="text-base sm:text-xl md:text-3xl text-white font-semibold leading-relaxed mb-6 max-w-6xl mx-auto">
-      Interested in collaborating on robotics projects or discussing opportunities?
-    </p>
+          <p className="text-base sm:text-xl md:text-3xl text-white font-semibold leading-relaxed mb-6 max-w-6xl mx-auto">
+            Interested in collaborating on robotics projects or discussing opportunities?
+          </p>
 
-    <div className="max-w-4xl mx-auto">
-      <div className="glass-card rounded-2xl p-8 sm:p-12 md:p-24 border-2 border-cyan-500/30">
-        <p className="text-xl sm:text-2xl md:text-3xl text-white font-semibold leading-snug tracking-tight mb-10 sm:mb-16 text-center">
-          Contact for ROS 2 autonomy work, deployment support, or technical reviews.
-        </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="glass-card rounded-2xl p-8 sm:p-12 md:p-24 border-2 border-cyan-500/30">
+              <p className="text-xl sm:text-2xl md:text-3xl text-white font-semibold leading-snug tracking-tight mb-10 sm:mb-16 text-center">
+                Contact for ROS 2 autonomy work, deployment support, or technical reviews.
+              </p>
 
-        <div className="space-y-6">
-          <div className="pt-6 border-t border-gray-700">
-            <p className="text-base sm:text-lg md:text-2xl font-bold text-cyan-400 uppercase tracking-wider mb-4">CONNECT</p>
-            <div className="flex items-center justify-center gap-6">
+              <div className="space-y-6">
+                <div className="pt-6 border-t border-gray-700">
+                  <p className="text-base sm:text-lg md:text-2xl font-bold text-cyan-400 uppercase tracking-wider mb-4">CONNECT</p>
+                  <div className="flex items-center justify-center gap-6">
                     <a href="mailto:armin.mehrvar@gmail.com" aria-label="Email Armin Mehrvar" className="group">
                       <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-all group-hover:scale-110">
                         <Mail size={28} className="text-cyan-400" />
@@ -536,13 +535,13 @@ export default function Home() {
                         <Github size={28} className="text-cyan-400" />
                       </div>
                     </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      </div>
-    </div>
-  </AnimatedSection>
+      </AnimatedSection>
 
     </div>
   );

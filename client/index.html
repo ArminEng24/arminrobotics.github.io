@@ -5,17 +5,37 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+      content="width=device-width, initial-scale=1" />
     <title>Armin Mehrvar - Robotics Software Engineer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" />
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+    <script>
+      (function () {
+        var endpoint = "%VITE_ANALYTICS_ENDPOINT%";
+        var websiteId = "%VITE_ANALYTICS_WEBSITE_ID%";
+
+        var endpointSet = endpoint && !endpoint.includes("VITE_ANALYTICS_ENDPOINT");
+        var idSet = websiteId && !websiteId.includes("VITE_ANALYTICS_WEBSITE_ID");
+
+        if (!endpointSet || !idSet) return;
+
+        var normalized = endpoint.replace(/\/+$/, "");
+        var s = document.createElement("script");
+        s.defer = true;
+        s.src = normalized + "/umami";
+        s.setAttribute("data-website-id", websiteId);
+        document.head.appendChild(s);
+      })();
+    </script>
   </body>
 
 </html>
