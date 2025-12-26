@@ -150,9 +150,9 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/30">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-xl md:text-2xl font-semibold leading-none flex items-center gap-2">
+          <div className="text-lg sm:text-xl md:text-2xl font-semibold leading-tight flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
             <span className="text-white">Armin Mehrvar</span>
-            <span className="text-gray-400">|</span>
+            <span className="text-gray-400 hidden sm:inline">|</span>
             <span className="text-cyan-400 font-mono font-bold">&lt;Robotics.dev&gt;</span>
           </div>
           <div className="hidden md:flex items-center gap-6">
@@ -205,28 +205,28 @@ export default function Home() {
       </nav>
 
       {/* Hero Section - Centered */}
-      <AnimatedSection id="hero" animate className="relative flex items-center justify-center pt-20">
+      <AnimatedSection id="hero" animate className="relative flex items-start md:items-center justify-center pt-20 pb-14 md:pb-0">
         <div className="px-4 text-center z-10">
-          <h1 className="text-6xl md:text-8xl font-bold gradient-text text-center mb-4 animate-fade-in-scale">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold gradient-text text-center mb-4 leading-tight animate-fade-in-scale">
             Robotics Software Engineer
           </h1>
-          <p className="text-cyan-400 font-semibold text-3xl md:text-4xl text-center mt-4 neon-text animate-slide-in-up stagger-1">
+          <p className="text-cyan-400 font-semibold text-lg sm:text-2xl md:text-4xl text-center mt-4 neon-text animate-slide-in-up stagger-1">
             ROS 2 autonomy. Navigation. Deployment support.
           </p>
 
           <div className="mt-8 max-w-3xl mx-auto text-left md:text-center">
             <ul className="space-y-3">
-              <li className="text-xl md:text-2xl text-gray-300 font-semibold">ROS 2 integration. Field debugging. Fleet issue triage.</li>
-              <li className="text-xl md:text-2xl text-gray-300 font-semibold">Navigation tuning. SLAM. Localization. Planning.</li>
-              <li className="text-xl md:text-2xl text-gray-300 font-semibold">C++ and Python. Linux. Docker. Simulation.</li>
+              <li className="text-base sm:text-lg md:text-2xl text-gray-300 font-semibold leading-snug">ROS 2 integration. Field debugging. Fleet issue triage.</li>
+              <li className="text-base sm:text-lg md:text-2xl text-gray-300 font-semibold leading-snug">Navigation tuning. SLAM. Localization. Planning.</li>
+              <li className="text-base sm:text-lg md:text-2xl text-gray-300 font-semibold leading-snug">C++ and Python. Linux. Docker. Simulation.</li>
             </ul>
           </div>
 
           <div className="flex justify-center gap-4 mt-8 animate-slide-in-up stagger-3">
-            <button onClick={() => scrollToSection('projects')} className="px-8 py-3 rounded-full bg-gradient-to-r from-cyan-600 to-cyan-500 hover:from-cyan-500 hover:to-cyan-400 text-white text-lg md:text-xl font-semibold transition-all duration-300 hover-lift neon-glow">
+            <button onClick={() => scrollToSection('projects')} className="px-6 sm:px-8 py-3 rounded-full bg-gradient-to-r from-cyan-600 to-cyan-500 hover:from-cyan-500 hover:to-cyan-400 text-white text-base sm:text-lg md:text-xl font-semibold transition-all duration-300 hover-lift neon-glow">
               View Projects
             </button>
-            <button onClick={() => scrollToSection('contact')} className="px-8 py-3 rounded-full border-2 border-cyan-400 text-cyan-400 text-lg md:text-xl hover:text-white hover:bg-cyan-400 transition-all duration-300 hover-lift glass">
+            <button onClick={() => scrollToSection('contact')} className="px-6 sm:px-8 py-3 rounded-full border-2 border-cyan-400 text-cyan-400 text-base sm:text-lg md:text-xl hover:text-white hover:bg-cyan-400 transition-all duration-300 hover-lift glass">
               Get in Touch
             </button>
           </div>
@@ -237,7 +237,7 @@ export default function Home() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+        <div className="hidden sm:block absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
           <ChevronDown size={24} className="text-accent" />
         </div>
       </AnimatedSection>
@@ -245,10 +245,10 @@ export default function Home() {
       
 
       {/* Experience Section */}
-      <AnimatedSection id="experience" animate className="border-t border-border/30 flex items-center">
+      <AnimatedSection id="experience" animate className="border-t border-border/30 flex items-start md:items-center py-14 md:py-0">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="inline-flex flex-col items-center w-fit max-w-full mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold gradient-text tracking-tight mb-3">Experience</h2>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold gradient-text tracking-tight mb-3">Experience</h2>
             <div className="h-1 w-full bg-gradient-to-r from-sky-400 via-cyan-400 to-teal-500 rounded-full animate-shimmer" />
           </div>
 
@@ -288,17 +288,17 @@ export default function Home() {
                 ]
               }
             ].map((job, index) => (
-              <div key={index} className="glass-card rounded-2xl p-8 text-left hover-lift">
+              <div key={index} className="glass-card rounded-2xl p-6 sm:p-8 text-left hover-lift">
                 <div className="mb-6">
-                  <h3 className="text-3xl font-bold text-cyan-400 mb-2">{job.role}</h3>
-                  <p className="text-xl md:text-2xl font-semibold text-white">{job.company}</p>
+                  <h3 className="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">{job.role}</h3>
+                  <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white">{job.company}</p>
                   <p className="text-base md:text-lg text-gray-400">{job.location}</p>
                 </div>
                 <ul className="space-y-3">
                   {job.achievements.map((achievement, idx) => (
                     <li key={idx} className="flex gap-3 text-gray-300">
                       <span className="text-cyan-400 font-bold mt-1">→</span>
-                      <span className="text-lg md:text-xl">{achievement}</span>
+                      <span className="text-base sm:text-lg md:text-xl">{achievement}</span>
                     </li>
                   ))}
                 </ul>
@@ -309,15 +309,15 @@ export default function Home() {
       </AnimatedSection>
 
       {/* Skills Section */}
-      <AnimatedSection id="skills" animate={false} className="border-t border-border/30 flex items-center">
+      <AnimatedSection id="skills" animate={false} className="border-t border-border/30 flex items-start md:items-center py-14 md:py-0">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="inline-flex flex-col items-center w-fit max-w-full mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold gradient-text tracking-tight mb-3">Skills</h2>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold gradient-text tracking-tight mb-3">Skills</h2>
             <div className="h-1 w-full bg-gradient-to-r from-sky-400 via-cyan-400 to-teal-500 rounded-full animate-shimmer" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="glass-card rounded-2xl p-8 hover-lift">
+            <div className="glass-card rounded-2xl p-6 sm:p-8 hover-lift">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center">
                   <Bot size={28} className="text-cyan-400" />
@@ -326,12 +326,12 @@ export default function Home() {
               </div>
               <div className="flex flex-wrap gap-3">
                 {['ROS 2', 'rclcpp', 'Nav2', 'MoveIt 2', 'TF2', 'Lifecycle'].map((s) => (
-                  <span key={s} className="px-4 py-2 rounded-lg bg-gray-800/80 text-white text-lg md:text-xl font-bold hover:bg-cyan-600 transition-colors">{s}</span>
+                  <span key={s} className="px-3 py-2 rounded-lg bg-gray-800/80 text-white text-base sm:text-lg md:text-xl font-bold hover:bg-cyan-600 transition-colors">{s}</span>
                 ))}
               </div>
             </div>
 
-            <div className="glass-card rounded-2xl p-8 hover-lift">
+            <div className="glass-card rounded-2xl p-6 sm:p-8 hover-lift">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center">
                   <Target size={28} className="text-blue-400" />
@@ -340,12 +340,12 @@ export default function Home() {
               </div>
               <div className="flex flex-wrap gap-3">
                 {['SLAM', 'Localization', 'Planning', 'Control', 'State Machines', 'Tuning'].map((s) => (
-                  <span key={s} className="px-4 py-2 rounded-lg bg-gray-800/80 text-white text-lg md:text-xl font-bold hover:bg-blue-600 transition-colors">{s}</span>
+                  <span key={s} className="px-3 py-2 rounded-lg bg-gray-800/80 text-white text-base sm:text-lg md:text-xl font-bold hover:bg-blue-600 transition-colors">{s}</span>
                 ))}
               </div>
             </div>
 
-            <div className="glass-card rounded-2xl p-8 hover-lift">
+            <div className="glass-card rounded-2xl p-6 sm:p-8 hover-lift">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-lg bg-teal-500/10 flex items-center justify-center">
                   <Brain size={28} className="text-teal-400" />
@@ -354,12 +354,12 @@ export default function Home() {
               </div>
               <div className="flex flex-wrap gap-3">
                 {['OpenCV', 'Point Clouds', 'Sensor Fusion', 'Calibration', 'Logging', 'Evaluation'].map((s) => (
-                  <span key={s} className="px-4 py-2 rounded-lg bg-gray-800/80 text-white text-lg md:text-xl font-bold hover:bg-teal-600 transition-colors">{s}</span>
+                  <span key={s} className="px-3 py-2 rounded-lg bg-gray-800/80 text-white text-base sm:text-lg md:text-xl font-bold hover:bg-teal-600 transition-colors">{s}</span>
                 ))}
               </div>
             </div>
 
-            <div className="glass-card rounded-2xl p-8 hover-lift">
+            <div className="glass-card rounded-2xl p-6 sm:p-8 hover-lift">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center">
                   <Laptop size={28} className="text-cyan-400" />
@@ -368,12 +368,12 @@ export default function Home() {
               </div>
               <div className="flex flex-wrap gap-3">
                 {['C++', 'Python', 'Bash', 'CMake', 'SQL', 'MATLAB'].map((s) => (
-                  <span key={s} className="px-4 py-2 rounded-lg bg-gray-800/80 text-white text-lg md:text-xl font-bold hover:bg-cyan-600 transition-colors">{s}</span>
+                  <span key={s} className="px-3 py-2 rounded-lg bg-gray-800/80 text-white text-base sm:text-lg md:text-xl font-bold hover:bg-cyan-600 transition-colors">{s}</span>
                 ))}
               </div>
             </div>
 
-            <div className="glass-card rounded-2xl p-8 hover-lift">
+            <div className="glass-card rounded-2xl p-6 sm:p-8 hover-lift">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-lg bg-sky-500/10 flex items-center justify-center">
                   <Satellite size={28} className="text-sky-400" />
@@ -382,12 +382,12 @@ export default function Home() {
               </div>
               <div className="flex flex-wrap gap-3">
                 {['LiDAR', 'RGB-D', 'IMU', 'Encoders', 'GNSS', 'Arms/AGVs'].map((s) => (
-                  <span key={s} className="px-4 py-2 rounded-lg bg-gray-800/80 text-white text-lg md:text-xl font-bold hover:bg-sky-600 transition-colors">{s}</span>
+                  <span key={s} className="px-3 py-2 rounded-lg bg-gray-800/80 text-white text-base sm:text-lg md:text-xl font-bold hover:bg-sky-600 transition-colors">{s}</span>
                 ))}
               </div>
             </div>
 
-            <div className="glass-card rounded-2xl p-8 hover-lift">
+            <div className="glass-card rounded-2xl p-6 sm:p-8 hover-lift">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-lg bg-cyan-500/10 flex items-center justify-center">
                   <Wrench size={28} className="text-cyan-400" />
@@ -396,7 +396,7 @@ export default function Home() {
               </div>
               <div className="flex flex-wrap gap-3">
                 {['Linux', 'Docker', 'Git', 'CI/CD', 'Gazebo', 'Isaac Sim'].map((s) => (
-                  <span key={s} className="px-4 py-2 rounded-lg bg-gray-800/80 text-white text-lg md:text-xl font-bold hover:bg-cyan-600 transition-colors">{s}</span>
+                  <span key={s} className="px-3 py-2 rounded-lg bg-gray-800/80 text-white text-base sm:text-lg md:text-xl font-bold hover:bg-cyan-600 transition-colors">{s}</span>
                 ))}
               </div>
             </div>
@@ -405,10 +405,10 @@ export default function Home() {
       </AnimatedSection>
 
       {/* Projects Section */}
-      <AnimatedSection id="projects" animate className="border-t border-border/30 flex items-center">
+      <AnimatedSection id="projects" animate className="border-t border-border/30 flex items-start md:items-center py-14 md:py-0">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="inline-flex flex-col items-center w-fit max-w-full mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold gradient-text tracking-tight mb-3">Featured Projects</h2>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold gradient-text tracking-tight mb-3">Featured Projects</h2>
             <div className="h-1 w-full bg-gradient-to-r from-sky-400 via-cyan-400 to-teal-500 rounded-full animate-shimmer" />
           </div>
 
@@ -460,9 +460,9 @@ export default function Home() {
               }
             ].map((project, index) => (
               <div key={index} className="border border-border/50 rounded-lg p-8 bg-card/50 backdrop-blur-sm hover:border-accent/30 transition-colors group">
-                <h3 className="text-3xl font-bold text-accent mb-2 group-hover:text-accent transition-colors">{project.title}</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-accent mb-2 group-hover:text-accent transition-colors">{project.title}</h3>
                 <p className="text-base md:text-lg font-mono text-secondary mb-4">{project.subtitle}</p>
-                <p className="text-lg md:text-xl text-foreground mb-6 font-semibold">{project.description}</p>
+                <p className="text-base sm:text-lg md:text-xl text-foreground mb-6 font-semibold">{project.description}</p>
                 <ul className="space-y-2">
                   {project.highlights.map((highlight, idx) => (
                     <li key={idx} className="flex gap-2 text-base md:text-lg text-foreground font-semibold">
@@ -478,19 +478,19 @@ export default function Home() {
       </AnimatedSection>
 
       {/* About Section */}
-      <AnimatedSection id="about" animate={false} className="border-t border-border/30 flex items-center">
+      <AnimatedSection id="about" animate={false} className="border-t border-border/30 flex items-start md:items-center py-14 md:py-0">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="inline-flex flex-col items-center w-fit max-w-full mb-12">
-            <h2 className="text-5xl md:text-6xl font-bold gradient-text tracking-tight mb-3 animate-slide-in-up">About</h2>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold gradient-text tracking-tight mb-3 animate-slide-in-up">About</h2>
             <div className="h-1 w-full bg-gradient-to-r from-sky-400 via-cyan-400 to-teal-500 rounded-full animate-shimmer" />
           </div>
 
           <div className="max-w-4xl mx-auto text-left md:text-center">
             <ul className="space-y-3">
-              <li className="text-xl md:text-2xl text-gray-300 font-semibold">ROS 2 nodes. Launch. TF. Diagnostics.</li>
-              <li className="text-xl md:text-2xl text-gray-300 font-semibold">Navigation stack tuning. Field issue triage.</li>
-              <li className="text-xl md:text-2xl text-gray-300 font-semibold">Sensors: LiDAR, IMU, RGB-D. Calibration and logging.</li>
-              <li className="text-xl md:text-2xl text-gray-300 font-semibold">C++17 and Python. Linux tooling. Reproducible builds.</li>
+              <li className="text-base sm:text-xl md:text-2xl text-gray-300 font-semibold leading-snug">ROS 2 nodes. Launch. TF. Diagnostics.</li>
+              <li className="text-base sm:text-xl md:text-2xl text-gray-300 font-semibold leading-snug">Navigation stack tuning. Field issue triage.</li>
+              <li className="text-base sm:text-xl md:text-2xl text-gray-300 font-semibold leading-snug">Sensors: LiDAR, IMU, RGB-D. Calibration and logging.</li>
+              <li className="text-base sm:text-xl md:text-2xl text-gray-300 font-semibold leading-snug">C++17 and Python. Linux tooling. Reproducible builds.</li>
             </ul>
           </div>
         </div>
@@ -498,42 +498,42 @@ export default function Home() {
 
       {/* Contact Section */}
 {/* Contact Section */}
-<AnimatedSection id="contact" animate={false} className="border-t border-border/30 flex items-center">
+<AnimatedSection id="contact" animate={false} className="border-t border-border/30 flex items-start md:items-center py-14 md:py-0">
   <div className="max-w-5xl mx-auto px-4 text-center">
     <div className="inline-flex flex-col items-center w-fit max-w-full mb-12">
-      <h2 className="text-6xl md:text-6xl font-bold gradient-text tracking-tight mb-3">Let's Connect</h2>
+      <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text tracking-tight mb-3">Let's Connect</h2>
       <div className="h-1 w-full bg-gradient-to-r from-sky-400 via-cyan-400 to-teal-500 rounded-full animate-shimmer" />
     </div>
 
-    <p className="text-xl md:text-3xl text-white font-semibold leading-relaxed mb-6 max-w-6xl mx-auto">
+    <p className="text-base sm:text-xl md:text-3xl text-white font-semibold leading-relaxed mb-6 max-w-6xl mx-auto">
       Interested in collaborating on robotics projects or discussing opportunities?
     </p>
 
     <div className="max-w-4xl mx-auto">
-      <div className="glass-card rounded-2xl p-12 md:p-24 border-2 border-cyan-500/30">
-        <p className="text-2xl md:text-3xl text-white font-semibold leading-snug tracking-tight mb-16 text-center">
+      <div className="glass-card rounded-2xl p-8 sm:p-12 md:p-24 border-2 border-cyan-500/30">
+        <p className="text-xl sm:text-2xl md:text-3xl text-white font-semibold leading-snug tracking-tight mb-10 sm:mb-16 text-center">
           Contact for ROS 2 autonomy work, deployment support, or technical reviews.
         </p>
 
         <div className="space-y-6">
           <div className="pt-6 border-t border-gray-700">
-            <p className="text-lg md:text-2xl font-bold text-cyan-400 uppercase tracking-wider mb-4">CONNECT</p>
+            <p className="text-base sm:text-lg md:text-2xl font-bold text-cyan-400 uppercase tracking-wider mb-4">CONNECT</p>
             <div className="flex items-center justify-center gap-6">
                     <a href="mailto:armin.mehrvar@gmail.com" aria-label="Email Armin Mehrvar" className="group">
-                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-all group-hover:scale-110">
-                        <Mail size={36} className="text-cyan-400" />
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-all group-hover:scale-110">
+                        <Mail size={28} className="text-cyan-400" />
                       </div>
                     </a>
 
                     <a href="https://www.linkedin.com/in/armin-mehrvar" target="_blank" rel="noopener noreferrer" className="group">
-                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-all group-hover:scale-110">
-                        <Linkedin size={36} className="text-cyan-400" />
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-all group-hover:scale-110">
+                        <Linkedin size={28} className="text-cyan-400" />
                       </div>
                     </a>
 
                     <a href="https://github.com/ArminEng24/" target="_blank" rel="noopener noreferrer" className="group">
-                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-all group-hover:scale-110">
-                        <Github size={36} className="text-cyan-400" />
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-all group-hover:scale-110">
+                        <Github size={28} className="text-cyan-400" />
                       </div>
                     </a>
             </div>

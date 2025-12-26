@@ -82,9 +82,15 @@ body {
 }
 
 .snap-section {
-  height: 100vh;
+  min-height: 100svh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+}
+
+@media (min-width: 768px) {
+  .snap-section {
+    height: 100vh;
+  }
 }
 
 /* Animation: subtle, engineered, no overshoot */
